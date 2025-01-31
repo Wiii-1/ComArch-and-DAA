@@ -1,0 +1,3 @@
+I would want to create an expense optimizer, technically this would be a finance application where it optimizes my expenses. I would apply algorithmic problem solving by the budget, by Priority, and the monthly or weekly expense, the algorithm will allocate correct budgets for the month or week and it'll accommodate and opt for the best budget plans that leave some for the savings. If savings is not possible then it'll be make the budget fit till it makes it to the next salary. 
+
+
