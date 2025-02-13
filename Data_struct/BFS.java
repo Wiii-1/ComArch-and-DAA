@@ -37,5 +37,6 @@ public class BFS {
         bfs.addEdge(1, 3);
         bfs.addEdge(2, 4);
         bfs.bfs(3);
+        
     }
 }
