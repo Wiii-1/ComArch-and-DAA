@@ -1,14 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
 class PriorityQueueClass {
-    private PriorityQueue<Integer> pq = new PriorityQueue<>();
+    private PriorityQueue<int[]> pq;
     private Scanner s = new Scanner(System.in);
+
+    public PriorityQueueClass(){
+        pq = new PriorityQueue<>((a, b) -> Integer.compare(b[0], a[0]));
+    }
 
     public void enqueue() {
         System.out.print("\nEnter a number to queue: ");
         int value = s.nextInt();
-        pq.add(value);
+        System.out.print("Enter its priorit (High = processed first): ");
+        int priority = s.nextInt();
+
+        pq.add(new int[]{priority, value});
         System.out.println("\n" +value + " added to queue");
     }
 
@@ -16,13 +25,20 @@ class PriorityQueueClass {
         if (pq.isEmpty()) {
             System.out.println("\nPriority queue is empty.");
         } else {
-            int removed = pq.poll();
-            System.out.println("\n" + removed + " removed from priority queue.");
+            int[] removed = pq.poll();
+            System.out.println("\n" + removed[1] + " removed from priority queue.");
         }
     }
 
     public void display() {
-        System.out.println("\nhe Priority Queue: " + pq);
+        List<int[]> temp = new ArrayList<>(pq);
+        temp.sort((a,b) -> Integer.compare(b[0], a[0]));
+        
+        for (int[] item : temp){
+            System.out.print(item[1] + " ");
+        }
+
+        System.out.print("");
     }
 
     public void run() {
