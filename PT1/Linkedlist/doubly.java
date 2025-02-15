@@ -66,25 +66,10 @@ class doublyLinkedlist {
                 temp = temp.next;
             }
             if (temp == null) return;
-            if (temp.next != null) temp.next = temp.prev;
-            if (temp.prev != null) temp.prev = temp.next;
-        }
-        
-        void deletionByPosition (int position){
-            if (head == null) return;
-            if (position == 0) {
-                head = head.next;
-            if (head != null) head.prev = null;
-                return;
-            }
-            Node temp = head;
-            for (int i = 0; temp != null && i < position; i++) {
-                temp = temp.next;
-            }
-            if (temp == null) return;
             if (temp.next != null) temp.next.prev = temp.prev;
             if (temp.prev != null) temp.prev.next = temp.next;
         }
+        
 
         boolean search(int key) {
             Node temp = head;
