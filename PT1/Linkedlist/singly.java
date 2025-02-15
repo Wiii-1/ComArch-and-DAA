@@ -47,35 +47,6 @@ class singlyLinkedList {
 
     }
 
-    void deletionByValue(int key){
-        if (head == null) return;
-        if (head.data == key){
-            head = head.next;
-            return;
-        }
-        Node temp = head;
-        while (temp.next != null && temp.next.data != key){
-            temp = temp.next;
-        }
-        if(temp.next == null) return;
-        temp.next = temp.next.next;
-
-    }
-    
-    void deletionByPosition (int position){
-        if(head == null) return;
-        if (position == 0){
-            head = head.next;
-            return;
-        }
-        Node temp = head;
-        for (int i = 0; temp.next != null && i < position - 1; i ++){
-            temp = temp.next;
-        }
-        if (temp == null || temp.next == null) return;
-        temp.next = temp.next.next;
-    }
-
     boolean search(int key) {
         Node temp = head;
         while (temp != null) {
