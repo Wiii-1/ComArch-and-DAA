@@ -43,8 +43,7 @@ In simpler terms linked list is just a list where everything you list is a data 
 
 
     void insertEnd(int data) {
-        Node newNode = new Node(data);              // this line right here is the 
-                                                    // just creating the node that stores the data withing
+        Node newNode = new Node(data);              // this line right here is just creates the node that stores the data withing
 
         if(head == null){   
             head = newNode;                         // this block of code here is the traversal where it traverse the whole list till it reach the last empty node 
@@ -191,7 +190,7 @@ In simpler terms linked list is just a list where everything you list is a data 
 
 ## Circular Linkedlist
 
-void insertEnd (int data){
+    void insertEnd (int data){
         Node newNode = new Node(data);                      // as all of the linkedlist this is the same the other function that creates a new node
         if (head ==null){                                   // this if decision blocks checks the whole list if it's empty, if the list is empty it creates a node and becomes the new head, & since it's a circular it just points it to itself
             head = newNode; 
