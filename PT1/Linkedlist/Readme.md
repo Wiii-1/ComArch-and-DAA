@@ -39,7 +39,7 @@ In simpler terms linked list is just a list where everything you list is a data 
 
 ## Code examples
 
-Singly Linkedlist
+## Singly Linkedlist
 
 
     void insertEnd(int data) {
@@ -95,12 +95,12 @@ Singly Linkedlist
             temp = temp.next;
         }
 
-        System.out.print(" null ");
+        System.out.print(" null ");                 // this last part of the block just prints null when it reached the end of the list
     }
 
 
 
-Doubly Linkedlist
+## Doubly Linkedlist
 
     void insertEnd(int data) {
         Node newNode = new Node(data);                  // Creates a new node storing the given data.
@@ -189,7 +189,53 @@ Doubly Linkedlist
         }
 
 
+## Circular Linkedlist
 
+void insertEnd (int data){
+        Node newNode = new Node(data);                      // as all of the linkedlist this is the same the other function that creates a new node
+        if (head ==null){                                   // this if decision blocks checks the whole list if it's empty, if the list is empty it creates a node and becomes the new head, & since it's a circular it just points it to itself
+            head = newNode; 
+            head.next = head;
+            return;
+        }
+        else {
+            Node temp = head;                               // it creates a pointer for traversal in the list
+            while(temp.next != head)                        // the while loop traverses the whole list till to the last node (which points to the head)
+                temp = temp.next;                           
+            temp.next = newNode;                            // it just updates the last node's pointer to the new node
+            newNode.next = head;                            // this just makes the new node points back to the head, maintaining the circular structure
+        }
+    }
+    void insertBeginning (int data){                        
+        Node newNode = new Node(data);
+
+        if (head == null){                                  // the first part of this decision block which checks the list if it's empty then it creates a new node and becomes the head itself since it's a circular list
+            head = newNode;
+            head.next = head;
+        }
+        else {                                              // the second part of the decisiong block which is the else traverses the whole list till to the last. creates a new node then that new node that points 
+                                                               to the current head and that last node point to the new node and updates the head to the new node
+            Node temp = head;
+            while (temp.next != head)
+                temp = temp.next;
+            newNode.next = head;
+            temp.next = newNode;
+            head = newNode;
+        }
+    }
+    public void display(){                                 // the decision block of this method is the first checks the list if it's empty and if it it prints empty, 
+        if (head == null){
+            System.out.print("empty.");
+            return;
+        }
+
+        Node temp = head;                                 // this starts the traversal from the head
+        do {                                              // starts the traversal and prints the data of the current node as it moves from next node then it stops when it completes a full cycle 
+            System.out.print(temp.data + " -> ");         
+            temp = temp.next;
+        } while (temp != head);
+        System.out.println("head");                      // it just indicated that the loop is back to the head
+    }
 
 
 
