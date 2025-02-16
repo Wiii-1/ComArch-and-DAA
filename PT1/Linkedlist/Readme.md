@@ -239,8 +239,54 @@ void insertEnd (int data){
 
 
 
-the code above is the method to add a node or data in the end of the list. The insert beginning is the same but without the traversal and the effort of traversing and creating 
-a pointer connection to the next node, the insert at is inserting in between the node and linking it properly and properly inserting it.
+The three sets of codes you see above is the singly, doubly, circular linkedlist with it's explanation of it's function. One can use this types of linkedlist in the real world is the music player.
+
+## Usage
+
+# For the singly linklist usage
+
+        // insertion of elements or data
+        sll.insertEnd(30);
+        sll.insertEnd(40);
+        sll.insertBeginning(10);
+        sll.insertAt(20, 2);
+
+        // displays the list
+        sll.display();   // output: 10 -> 30 -> 20 -> 40 ->  null 
+
+        //
+        System.out.println(sll.search(10)); // output: true
+
+# For the doubly Linkedlist usage
+
+        // insertion of elements or data
+        dll.insertEnd(50);
+        dll.insertEnd(40);
+        dll.insertBeginning(5);
+        dll.insertAt(30, 2);
+
+        // displays the list
+        dll.displayForward();       // output: 5 -> 50 -> 30 -> 40 -> Null
+        dll.displayBackwards();     // output: 40 -> 30 -> 50 -> 5 -> Null
+
+        // deletion in the list
+        dll.deletionByValue(40);    
+
+        // searches for the element 
+        System.out.println(dll.search(40)); // false
+
+        
+
+# For Circular Linkedlist usage
+
+        // insertion of eleemnts or data
+        cll.insertBeginning(1);
+        cll.insertEnd(4);
+        cll.insertEnd(3);
+
+        // displays the list
+        cll.display(); //output: 1 -> 4 -> 3 -> head
+
 
 
 
