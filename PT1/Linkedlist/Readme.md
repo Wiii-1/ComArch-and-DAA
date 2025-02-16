@@ -1,4 +1,4 @@
-## Linkedlist
+# Linkedlist
 
 This the 3 types of linkedlist 
 
@@ -14,7 +14,7 @@ Circular Linkedlist - is a mix of singly and doubly but not all of the features 
 
 In simpler terms linked list is just a list where everything you list is a data and is being stored in a node that also contains a pointer or address to the next node or the next data in the list. 
 
-## Features
+# Features
 
 - Singly Linkedlist 
     -insert End
@@ -37,7 +37,7 @@ In simpler terms linked list is just a list where everything you list is a data 
     -insert Beginning
     -display
 
-## Code examples
+# Code examples
 
 ## Singly Linkedlist
 
@@ -241,9 +241,9 @@ void insertEnd (int data){
 
 The three sets of codes you see above is the singly, doubly, circular linkedlist with it's explanation of it's function. One can use this types of linkedlist in the real world is the music player.
 
-## Usage
+# Usage
 
-# For the singly linklist usage
+## For the singly linklist usage
 
         // insertion of elements or data
         sll.insertEnd(30);
@@ -257,7 +257,7 @@ The three sets of codes you see above is the singly, doubly, circular linkedlist
         //
         System.out.println(sll.search(10)); // output: true
 
-# For the doubly Linkedlist usage
+## For the doubly Linkedlist usage
 
         // insertion of elements or data
         dll.insertEnd(50);
@@ -277,7 +277,7 @@ The three sets of codes you see above is the singly, doubly, circular linkedlist
 
         
 
-# For Circular Linkedlist usage
+## For Circular Linkedlist usage
 
         // insertion of eleemnts or data
         cll.insertBeginning(1);
