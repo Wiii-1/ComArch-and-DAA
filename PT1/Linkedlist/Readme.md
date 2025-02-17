@@ -37,7 +37,7 @@ In simpler terms linked list is just a list where everything you list is a data 
     -insert Beginning
     -display
 
-# Code examples
+# Code explanation
 
 ## Singly Linkedlist
 
