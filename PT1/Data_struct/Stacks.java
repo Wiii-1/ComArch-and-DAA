@@ -2,14 +2,14 @@
 import java.util.LinkedList;
 import java.util.Scanner;
 
-class Stack {
+class CustomStack {
     private LinkedList <Integer> stack = new LinkedList<>();
     private Scanner s = new Scanner(System.in);
 
     public void push(){
         System.out.print("\nEnter a number to push: ");
         int value = s.nextInt();
-        stack.add(value);
+        stack.addFirst(value);
         System.out.println("\n" + value + " added to stack");
     }
     public void pop(){
@@ -45,7 +45,7 @@ class Stack {
 }
 public class Stacks {
     public static void main(String[]args){
-        Stack thestack = new Stack();
+        CustomStack thestack = new CustomStack();
         thestack.run();
     }
 }
