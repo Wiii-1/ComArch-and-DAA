@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 import java.util.Scanner;
-class Queue {
+class CustomQueue {
     private LinkedList<Integer> queue = new LinkedList<>();
     private Scanner s = new Scanner(System.in);
 
@@ -16,7 +16,7 @@ class Queue {
             System.out.println("Empty");
         } 
         else {
-            int removed = queue.removeFirst();
+            int removed = queue.poll();
             System.out.println("\n" + removed + " removed");
         }
     }
@@ -27,7 +27,7 @@ class Queue {
     
     public void run(){
         while(true){
-            System.out.println("\n1. Add \n2. Removed \n3. display \n4. Exit");
+            System.out.println("\n1. Add \n2. Remove \n3. display \n4. Exit");
             System.out.print("\nChoose an option: ");
             int choice = s.nextInt();
     
@@ -51,7 +51,7 @@ class Queue {
 
 public class Queues{
     public static void main(String[]args){
-        Queue queue = new Queue();    
+        CustomQueue queue = new CustomQueue();    
         queue.run();
     }
 }
