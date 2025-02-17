@@ -9,11 +9,11 @@ class Node {
     }
 }
 
-class Binart_search_tree{
+class Binary_search_tree{
     Node root;
     
 
-    public Binart_search_tree(){
+    public Binary_search_tree(){
         root = null;
     }
 
@@ -50,7 +50,7 @@ class Binart_search_tree{
 
 public class BST {
     public static void main(String[]args){
-        Binart_search_tree bst = new Binart_search_tree();
+        Binary_search_tree bst = new Binary_search_tree();
         bst.insert(30);
         bst.insert(32);
         bst.insert(25);
