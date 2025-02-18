@@ -83,101 +83,137 @@
 ## Code Implemetation and explanation
 
 # stacks implementation an explanation
+    class CustomStack {
+        private LinkedList <Integer> stack = new LinkedList<>();
+        private Scanner s = new Scanner(System.in);
 
-    private LinkedList <Integer> stack = new LinkedList<>();
-    private Scanner s = new Scanner(System.in);
-
-    public void push(){
-        System.out.print("\nEnter a number to push: ");
-        int value = s.nextInt();
-        stack.addFirst(value);
-        System.out.println("\n" + value + " added to stack");
-    }
-    public void pop(){
-        if(stack.isEmpty()){
-            System.out.println("Empty");
-        }else {
-            int removed = stack.removeFirst();
-            System.out.println("\n" + removed + " removed from stack");
+        public void push(){
+            System.out.print("\nEnter a number to push: ");
+            nt value = s.nextInt();
+            stack.addFirst(value);
+            System.out.println("\n" + value + " added to stack");
         }
-    }
-    public void display (){
-        System.out.println("\n\nThe stack: " + stack);
-    }
+        public void pop(){
+            if(stack.isEmpty()){
+                .out.println("Empty");
+            }else {
+                int removed = stack.removeFirst();
+                System.out.println("\n" + removed + " removed from stack");
+            }
+        }
+        public void display (){
+            System.out.println("\n\nThe stack: " + stack);
+        }
 
-    public void run(){
-        while(true){
-            System.out.println("\n1. push \n2. pop \n3. display \n4. exit");
-            System.out.print("\nChoose an option: ");
-            int choice = s.nextInt();
+        public void run(){
+            while(true){
+                System.out.println("\n1. push \n2. pop \n3. display \n4. exit");
+                System.out.print("\nChoose an option: ");
+                int choice = s.nextInt();
 
-            switch (choice){
-                case 1 -> push();
-                case 2 -> pop();
-                case 3 -> display();
-                case 4 -> {
-                    System.out.println("Exit");
-                    return;
+                switch (choice){
+                    case 1 -> push();
+                    case 2 -> pop();
+                    case 3 -> display();
+                    case 4 -> {
+                        System.out.println("Exit");
+                        return;
+                    }
+                    default -> System.out.println("invalid choice");
                 }
-                default -> System.out.println("invalid choice");
             }
         }
     }
-
     output: 
 
-    1. push
-    2. pop
-    3. display
-    4. Exit
+1. push 
+2. pop 
+3. display 
+4. exit
 
-    choose an option: 1 
+Choose an option: 1
 
-    Enter a number to push: 1
+Enter a number to push: 10
 
-    1. push
-    2. pop
-    3. display
-    4. Exit
+10 added to stack
 
-    choose an option: 2
+1. push 
+2. pop 
+3. display 
+4. exit
 
-    1. push
-    2. pop
-    3. display
-    4. Exit
+Choose an option: 1
 
-    choose an option: 3
+Enter a number to push: 20
 
-    The stack: [3, 1]
+20 added to stack
+
+1. push 
+2. pop 
+3. display 
+4. exit
+
+Choose an option: 1
+
+Enter a number to push: 30
+
+30 added to stack
+
+1. push 
+2. pop 
+3. display 
+4. exit
+
+Choose an option: 3
 
 
-    1. push
-    2. pop
-    3. display
-    4. Exit
+The stack: [30, 20, 10]
 
-    choose an option: 2
+1. push
+2. pop
+3. display
+4. exit
 
-    3 removed from stack
+Choose an option: 2
 
-    1. push
-    2. pop
-    3. display
-    4. Exit
+30 removed from stack
 
-    choose an option: 3
+1. push
+2. pop
+3. display
+4. exit
 
-    The stack: [1]
+Choose an option: 3
 
-    1. push
-    2. pop
-    3. display
-    4. Exit
 
-    choose an option: 4
+The stack: [20, 10]
 
-    Exit
+1. push
+2. pop
+3. display
+4. exit
+
+Choose an option: 2
+
+20 removed from stack
+
+1. push
+2. pop
+3. display
+4. exit
+
+Choose an option: 3
+
+
+The stack: [10]
+
+1. push
+2. pop
+3. display
+4. exit
+
+Choose an option: 4
+Exit
 
 
 
@@ -188,16 +224,411 @@ the users options and the user may choose from.
 
 # Queue Implementation and explanation
 
+    class Queue {
+        private LinkedList<Integer> queue = new LinkedList<>();
+    private Scanner s = new Scanner(System.in);
+
+    public void enqueue() {
+        System.out.print("\nEnter an element to add to the queue:");
+        int value = s.nextInt();
+        queue.add(value);
+        System.out.println("\n"+value + " added to queue");
+    }
+
+    public void dequeue(){
+        if(queue.isEmpty()){
+            System.out.println("Empty");
+        } 
+        else {
+            int removed = queue.poll();
+            System.out.println("\n" + removed + " removed");
+        }
+    }
+
+    public void display (){
+        System.out.println(" \nThe queue: " + queue);
+    }
+    
+    public void run(){
+        while(true){
+            System.out.println("\n1. Add \n2. Remove \n3. display \n4. Exit");
+            System.out.print("\nChoose an option: ");
+            int choice = s.nextInt();
+    
+            switch (choice) {
+                case 1 -> enqueue();
+                case 2 -> dequeue();
+                case 3 -> display();
+                case 4 -> {
+                    System.out.println("Exit");
+                    return;
+                }
+                default -> System.out.println("\nInvalid Choice.");
+            }
+        }
+    }
+    }
+
+    output: 
+
+1. Add 
+2. Remove 
+3. display 
+4. Exit
+
+Choose an option: 1
+
+Enter an element to add to the queue:14
+
+14 added to queue
+
+1. Add 
+2. Remove 
+3. display 
+4. Exit
+
+Choose an option: 1
+
+Enter an element to add to the queue:18
+
+18 added to queue
+
+1. Add 
+2. Remove 
+3. display 
+4. Exit
+
+Choose an option: 1
+
+Enter an element to add to the queue:20
+
+20 added to queue
+
+1. Add
+2. Remove
+3. display
+4. Exit
+
+Choose an option: 3
+ 
+The queue: [14, 18, 20]
+
+1. Add
+2. Remove
+3. display
+4. Exit
+
+Choose an option: 2
+
+14 removed
+
+1. Add
+2. Remove
+3. display
+4. Exit
+
+Choose an option: 3
+ 
+The queue: [18, 20]
+
+1. Add
+2. Remove
+3. display
+4. Exit
+
+Choose an option: 2
+
+18 removed
+
+1. Add
+2. Remove
+3. display
+4. Exit
+
+Choose an option: 3
+ 
+The queue: [20]
+
+1. Add
+2. Remove
+3. display
+4. Exit
+
+Choose an option: 4
+Exit
+
+- The basic concept of Queue that I have written above uses FIFO or first in first out along with it's output features, first I wrote Queue the same way from my stacks where I encapsulated the stacks an created a custom stacks with added functions of a user input, display, insertion, removal and Exiting function. The first method was the same from the typical basic queue where it just enqueue or add an item to the queue, A dequeue method where a user can remove a element or data to the queue. I added the display method for the user if he/she wants to see the queue & for the last is just simply a method where it runs it all so I only need to call the class where I encapsulated the queue class and made it modular for other uses.
+
+
 # Priority Queue Implementation and explanation
+
+    class PriorityQueueClass {
+        private PriorityQueue<int[]> pq;
+        private Scanner s = new Scanner(System.in);
+
+    public PriorityQueueClass(){
+        pq = new PriorityQueue<>((a, b) -> Integer.compare(b[0], a[0]));
+    }
+
+    public void enqueue() {
+        System.out.print("\nEnter a number to queue: ");
+        int value = s.nextInt();
+        System.out.print("Enter its priorit (High = processed first): ");
+        int priority = s.nextInt();
+
+        pq.add(new int[]{priority, value});
+        System.out.println("\n" +value + " added to queue");
+    }
+
+    public void dequeue() {
+        if (pq.isEmpty()) {
+            System.out.println("\nPriority queue is empty.");
+        } else {
+            int[] removed = pq.poll();
+            System.out.println("\n" + removed[1] + " removed from priority queue.");
+        }
+    }
+
+    public void display() {
+        List<int[]> temp = new ArrayList<>(pq);
+        temp.sort((a,b) -> Integer.compare(b[0], a[0]));
+        
+        for (int[] item : temp){
+            System.out.print(item[1] + " ");
+        }
+
+        System.out.print("");
+    }
+
+    public void run() {
+        while (true) {
+            System.out.println("\n1. Add to Queue \n2. Remove from Queue \n3. Display \n4. Exit");
+            System.out.print("\nChoose an option: ");
+            int choice = s.nextInt();
+
+            switch (choice) {
+                case 1 -> enqueue();
+                case 2 -> dequeue();
+                case 3 -> display();
+                case 4 -> {
+                    System.out.println("Exiting...");
+                    return; 
+                }
+                default -> System.out.println("Invalid choice.");
+            }
+        }
+    }
+    }
+
+    output: 
 
 # Min heap Implementation and explanation
 
+    class Min_heap{
+        private PriorityQueue <Integer> min_heap = new PriorityQueue<>();
+        private Scanner s = new Scanner(System.in);
+
+    public void Add(){
+        System.out.print("\nEnter a value:  ");
+        int value = s.nextInt();
+        min_heap.add(value);
+        System.out.println("\n" + value + " is added\n");
+    }
+    public void remove(){
+        if (min_heap.isEmpty()){
+            System.out.println("Empty");
+        }
+        else {
+            int remove = min_heap.poll();
+            System.out.println("\n"+ remove + " is removed");
+        }
+    }
+    public void display(){
+        System.out.println("\nThe min heap: " + min_heap + "\n");
+    }
+    public void run(){
+        while (true){
+            System.out.println("Your options are: ");
+            System.out.println("\n1. Add a value \n2. Remove a value \n3. Display \n4. Exit");
+            System.out.print("\nChoose: ");
+            int choice =s.nextInt();
+
+            switch (choice) {
+                case 1 -> Add();
+                case 2 -> remove();
+                case 3 -> display();
+                case 4 -> {
+                    System.out.println("Exit");
+                    return;
+                }
+                default -> System.out.println("Invalid choice");
+            }
+        }
+    }
+    }
+
+    output: 
+
 # Max Heap Implementation and explanation
 
-# Graphs Implementattion and explanation
+    class Max_heap{
+        private PriorityQueue <Integer> maxheap = new PriorityQueue<>(Collections.reverseOrder());
+        private Scanner s = new Scanner(System.in);
+
+    public void add() {
+        System.out.print("\nEnter a value: ");
+        int value = s.nextInt();
+        maxheap.add(value);
+        System.out.println("\nvalue " + value + " added");
+    }
+    public void remove() {
+        if (maxheap.isEmpty()){
+            System.out.println("Empyty");
+        } else {
+            int remove = maxheap.poll();
+            System.out.println("\nremoved " + remove);
+        }
+    }
+    public void display (){
+        System.out.println("\nThe max heap: " + maxheap);
+    }
+    public void run (){
+        while(true){
+            System.out.println("\nYour options are:");
+            System.out.println("\n1. Add a value \n2. Remove a value \n3. Display \n4. Exit");
+            System.out.print("\nchoose: ");
+            int choice = s.nextInt();
+
+            switch (choice){
+                case 1 -> add();
+                case 2 -> remove();
+                case 3 -> display();
+                case 4 -> {
+                    System.out.println("Exit");
+                    return;
+                }
+                default -> System.out.println("\nInvalid Choice");
+            }
+        }
+    }
+    }
+
+    output: 
+
+# Graphs Implementattion and 
+
+    public class Graphs {
+        private Map<Integer, List<Integer>> adjList = new HashMap<>();
+
+    public void addEdge (int u, int v){
+        adjList.putIfAbsent(u,  new ArrayList<>());
+        adjList.putIfAbsent(v,  new ArrayList<>());
+        adjList.get(u).add(v);
+        adjList.get(v).add(u);
+    }
+
+    public void display(){
+        for(int node : adjList.keySet()){
+            System.out.println(node + "->" + adjList.get(node));
+        }
+    }
+
+    public static void main (String[]args){
+        Graphs graphs = new Graphs();
+        graphs.addEdge(1,2);
+        graphs.addEdge(1,3);
+        graphs.addEdge(2,4);
+        graphs.addEdge(4, 5);
+        graphs.display();
+    }
+    }
+
+    output: 
 
 # Breathe First Search Implementation and explanation
 
+    public class BFS {
+        public Map<Integer, List<Integer>> graph = new HashMap<>();
+    
+    public void addEdge (int u, int v){
+        graph.putIfAbsent(u, new ArrayList<>());
+        graph.putIfAbsent(v, new ArrayList<>());
+        graph.get(u). add(v);
+        graph.get(v). add(u);
+    }
+    public void bfs(int start){
+        Queue<Integer> queue = new LinkedList<>();
+        Set<Integer> visited = new HashSet<>();
+
+        queue.add(start);
+        visited.add(start);
+
+        while (!queue.isEmpty()) {
+            int node = queue.poll();
+            System.out.print(node + " ");
+
+            for (int neighbor : graph.get(node)){
+                if(!visited.contains(neighbor)) {
+                    visited.add(neighbor);
+                    queue.add(neighbor);
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        BFS bfs = new BFS();
+        bfs.addEdge(1, 2);
+        bfs.addEdge(1, 3);
+        bfs.addEdge(2, 4);
+        bfs.bfs(3);
+        
+    }
+    }
+
+    output: 
+
 # Binary Search Tree Implementation and explanation
+
+    class Binary_search_tree {
+         Node root;
+    
+
+    public Binary_search_tree(){
+        root = null;
+    }
+
+    public void insert(int key){
+        root = insertRec(root, key);
+    }
+
+    private Node insertRec(Node root, int key){
+        if (root == null){
+            return new Node(key);
+        }
+
+        if(key < root.key){
+            root.left = insertRec(root.left , key);
+        }
+        else if (key > root.key){
+            root.right = insertRec(root.right, key);
+        }
+        return root;
+    }
+    public void inorder(){
+        inorderRec(root);
+        System.out.println();
+    }
+    private void inorderRec(Node root){
+        if (root != null){
+            inorderRec(root.left);
+            System.out.print(root. key + " ");
+            inorderRec(root.right);
+        }
+    }
+    }
+
+    output: 
+
 
 
