@@ -1,130 +1,137 @@
-# Data Structures 
+# Data Structures
 
-# ontents 
+## Introduction 
+This repository contains the basic implementation and explanation of various data structures and it's methods and common operation.
+
+## Prequisites
+- Java Development kit (JDK) 8 or higher
+
+## Contents
 
 - Stacks
 - Queues
 - Priority Queues
 - Heap
-    - Min heap
-    - Max heap
+  - Min heap
+  - Max heap
 - Graphs
-    - BFS (Breathe first searh)
+  - BFS (Breadth-First Search)
 - Tree
-    - BST (Binary Search Tree)
+  - BST (Binary Search Tree)
 
 # Features
 
-- Stack 
-    - used linkedlist for dynamic rezing
-    - insertion
-    - removal
-    - display of stack
-    - interactive menu
-    - Encasulation 
-    - User input
-    - Exiting function
+### Stack
+- Used LinkedList for dynamic resizing
+- Insertion
+- Removal
+- Display of stack
+- Interactive menu
+- Encapsulation
+- User input
+- Exiting function
 
-- Queue
-    - used linkedlist for dynamic rezing
-    - insertion
-    - removal
-    - display of stack
-    - interactive menu
-    - Encasulation 
-    - User input
-    - Exiting function
+### Queue
+- Used LinkedList for dynamic resizing
+- Insertion
+- Removal
+- Display of queue
+- Interactive menu
+- Encapsulation
+- User input
+- Exiting function
 
+### Priority Queue
+- Priority-based processing
+- Insertion
+- Removal
+- Display of queue
+- Interactive menu
+- Encapsulation
+- User input
+- Exiting function
 
-- Priority Queue
-    - Priority based processing
-    - insertion
-    - removal
-    - display of stack
-    - interactive menu
-    - Encasulation 
-    - User input
-    - Exiting function
+### Min Heap
+- Insertion
+- Removal (removes the smallest element)
+- Display
+- Interactive menu
+- Encapsulation & modularity
+- User input
+- Exiting function
 
-- Min heap
-    - insertion
-    - removal ( removes the smallest element)
-    - display
-    - interactive menu
-    - Encapsulation & modulation
-    - user input
-    - Exiting function
+### Max Heap
+- Insertion
+- Removal (removes the largest element)
+- Display of the heap
+- Interactive menu
+- Encapsulation & modularity
+- User input
+- Exiting function
 
+### Graphs
+- Adds an edge
+- Displays the graph
 
-- Max heap 
-    - Insetion
-    - removal ( removes the largest element)
-    - display of the heap
-    - interactive menu
-    - Encapsulation & Modularity
-    - user input
-    - Exiting function
+### Breadth-First Search
+- Add Edge method
+- BFS method
 
+### Binary Search Tree
+- Ordered insertion
+- Recursive insertion
+- Inorder traversal
 
-- Graphs
-    - adds an edge 
-    - displays the graph
-    
+# Code Implementation and Explanation
 
-- Breathe First Search
-    - 
+### Stack Implementation and Explanation
+```java
+class CustomStack {
+    private LinkedList<Integer> stack = new LinkedList<>();
+    private Scanner s = new Scanner(System.in);
 
-- Binary Search Tree
-    - Ordered Insertion
-    - Recursive insertion
-    - inorder traversal 
+    public void push() {
+        System.out.print("\nEnter a number to push: ");
+        int value = s.nextInt();
+        stack.addFirst(value);
+        System.out.println("\n" + value + " added to stack");
+    }
 
-
-# Code Implemetation and explanation
-
-## stacks implementation an explanation
-    class CustomStack {
-        private LinkedList <Integer> stack = new LinkedList<>();
-        private Scanner s = new Scanner(System.in);
-
-        public void push(){
-            System.out.print("\nEnter a number to push: ");
-            nt value = s.nextInt();
-            stack.addFirst(value);
-            System.out.println("\n" + value + " added to stack");
+    public void pop() {
+        if (stack.isEmpty()) {
+            System.out.println("Empty");
+        } else {
+            int removed = stack.removeFirst();
+            System.out.println("\n" + removed + " removed from stack");
         }
-        public void pop(){
-            if(stack.isEmpty()){
-                .out.println("Empty");
-            }else {
-                int removed = stack.removeFirst();
-                System.out.println("\n" + removed + " removed from stack");
-            }
-        }
-        public void display (){
-            System.out.println("\n\nThe stack: " + stack);
-        }
+    }
 
-        public void run(){
-            while(true){
-                System.out.println("\n1. push \n2. pop \n3. display \n4. exit");
-                System.out.print("\nChoose an option: ");
-                int choice = s.nextInt();
+    public void display() {
+        System.out.println("\n\nThe stack: " + stack);
+    }
 
-                switch (choice){
-                    case 1 -> push();
-                    case 2 -> pop();
-                    case 3 -> display();
-                    case 4 -> {
-                        System.out.println("Exit");
-                        return;
-                    }
-                    default -> System.out.println("invalid choice");
+    public void run() {
+        while (true) {
+            System.out.println("\n1. Push \n2. Pop \n3. Display \n4. Exit");
+            System.out.print("\nChoose an option: ");
+            int choice = s.nextInt();
+
+            switch (choice) {
+                case 1 -> push();
+                case 2 -> pop();
+                case 3 -> display();
+                case 4 -> {
+                    System.out.println("Exit");
+                    return;
                 }
+                default -> System.out.println("Invalid choice");
             }
         }
     }
-    output: 
+}
+```
+
+output: 
 
 1. push 
 2. pop 
@@ -223,7 +230,7 @@ it'll proceed in removing or popping the element/data in the stack and stores it
 the users options and the user may choose from. To use it is already easy and self explanatory 
 
 ## Queue Implementation and explanation
-
+```java
     class Queue {
         private LinkedList<Integer> queue = new LinkedList<>();
     private Scanner s = new Scanner(System.in);
@@ -268,7 +275,7 @@ the users options and the user may choose from. To use it is already easy and se
         }
     }
     }
-
+```
     output: 
 
 1. Add 
@@ -361,7 +368,7 @@ Exit
 
 
 ## Priority Queue Implementation and explanation
-
+```java
     class PriorityQueueClass {
         private PriorityQueue<int[]> pq;
         private Scanner s = new Scanner(System.in);
@@ -419,7 +426,7 @@ Exit
         }
     }
     }
-
+```
     output: 
 
 1. Add to Queue
@@ -517,7 +524,7 @@ Exiting...
 - The priority Queue is the same with the normal queue with a bit of difference where I implemented spcifically for priority queue so that I can store a element or number along with it's priority value. I have wrote a cutsom enqueue, dequeue that accepts a user input, along side with it the custom display that sorts all the numbers in the queue by their priority value in a descening order & prints all the number in a descending order from their priority value.  For the last method I wrote is the custom run method so that runs the whole code using a switch
 
 ## Min heap Implementation and explanation
-
+```java
     class Min_heap{
         private PriorityQueue <Integer> min_heap = new PriorityQueue<>();
         private Scanner s = new Scanner(System.in);
@@ -560,7 +567,7 @@ Exiting...
         }
     }
     }
-
+```
     output: 
 
 Your options are: 
@@ -668,7 +675,7 @@ Exit
 - The min heap that I wrote is just simply that queue but the only difference is that the smallest is the first on the queue and will be the first one out and the same with the max heap the only difference is that the max heap is reverse order. To use it is already easy and self explanatory 
 
 ## Max Heap Implementation and explanation
-
+```java
     class Max_heap{
         private PriorityQueue <Integer> maxheap = new PriorityQueue<>(Collections.reverseOrder());
         private Scanner s = new Scanner(System.in);
@@ -710,7 +717,7 @@ Exit
         }
     }
     }
-
+```
     output: 
 
 Your options are:
@@ -820,7 +827,7 @@ Exit
 -  I wrote max heap for moddularity so that I can use it everyclass that I want to use it and encapsulated every method inside that class for easy reuse independently. The Features I wrote for max heap is custom insertion, removal, an interactive menu where it has user input, For the last I created a run method where that whole class is being run and so that I can just simply call the class and use the run method. The only Difference this from min heap is the reversed order where it display and pop function where that biggest is in the first and first to be removed. To use it is already easy and self explanatory 
 
 # Graphs Implementation and explanation
-
+```java
     public class Graphs {
         private Map<Integer, List<Integer>> adjList = new HashMap<>();
 
@@ -846,7 +853,7 @@ Exit
         graphs.display();
     }
     }
-
+```
     output: 
 
 1->[2, 3]
@@ -858,7 +865,7 @@ Exit
 - The simple creation of graph that I wrote is for only the explanation. The graph is an adjacent list that uses a hash map to store node and their corresponding neigbors, it is an undirected graph where each edge is bidirectional meaning pointing both ways. The graph that I wrote has a dynamic edge addition so that it would check the nodes before adding edges, the graph traversal is just printing  the adjacent list. I madde the graph that I wrote scalable that can store large graphs with efficiency with hashmaps and arraylist and I madde it simple without any extra dependencies.
 
 ## Breathe First Search Implementation and explanation
-
+```java
     public class BFS {
         public Map<Integer, List<Integer>> graph = new HashMap<>();
     
@@ -897,13 +904,13 @@ Exit
         
     }
     }
-
+```
     output: 3 1 2 4 
 
-- 
+- The Breadth First Search that I wrote is a simple one with any unique features that i could call i create. whole bfs class the graph field showing adjacent list of the graph, The add edge method adds an undirected edge between the nodes due to the method that I wrote putifAbsents it ensures the both nodes are present in the graph and then adds each node to the other adjacent list & for the last method bfs is the one handling performing the breadth first search starting from the give node then it uses the queue to manage the nodes to be vistite and set keeps track of all visited node then it prints all the node that it have been visited
 
 ## Binary Search Tree Implementation and explanation
-
+```java
     class Binary_search_tree {
          Node root;
     
@@ -941,7 +948,7 @@ Exit
         }
     }
     }
-
+```
     output: 10 25 30 32 40 
 
 - The Binary Search Tree that I wrote is simple yet I incorporated a recursion for the correct placemnet of each entered input or for short I created a predefined input and that inputed data or number will be sorted and will be put to whether left to right so the type of Binary search tree I wrote is the inorder traversal primariraly this is the simplest yet it's goodd for examples and explanation.
