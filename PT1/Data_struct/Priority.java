@@ -14,7 +14,7 @@ class PriorityQueueClass {
     public void enqueue() {
         System.out.print("\nEnter a number to queue: ");
         int value = s.nextInt();
-        System.out.print("Enter its priorit (High = processed first): ");
+        System.out.print("\nEnter its priorit (High = processed first): ");
         int priority = s.nextInt();
 
         pq.add(new int[]{priority, value});
@@ -35,7 +35,7 @@ class PriorityQueueClass {
         temp.sort((a,b) -> Integer.compare(b[0], a[0]));
         
         for (int[] item : temp){
-            System.out.print(item[1] + " ");
+            System.out.print( "\nPriority Queue: "+ "["+item[1]+"]\n"  );
         }
 
         System.out.print("");
