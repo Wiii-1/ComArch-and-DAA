@@ -6,6 +6,10 @@ This repository contains the basic implementation and explanation of various dat
 ## Prequisites
 - Java Development kit (JDK) 8 or higher
 
+## Code demo
+
+https://asciinema.org/a/704079
+
 ## Contents
 
 - Stacks
