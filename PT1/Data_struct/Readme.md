@@ -514,7 +514,7 @@ The Priority Queue: [20]
 Choose an option: 4
 Exiting...
 
-- The priority Queue is the same with the normal queue with a bit of difference where I implemented spcifically for priority queue so I can store a element or number along wit it's priority value 
+- The priority Queue is the same with the normal queue with a bit of difference where I implemented spcifically for priority queue so that I can store a element or number along with it's priority value. I have wrote a cutsom enqueue, dequeue that accepts a user input, along side with it the custom display that sorts all the numbers in the queue by their priority value in a descening order & prints all the number in a descending order from their priority value.  For the last method I wrote is the custom run method so that runs the whole code using a switch
 
 ## Min heap Implementation and explanation
 
@@ -665,7 +665,7 @@ Your options are:
 Choose: 4
 Exit
 
-- The min heap that I wrote is just simply that queue butt that tonly difference is that the smallest is the first on the queue and will be the first one out and the same with the max heap the only difference is that the max heap is reverse order. To use it is already easy and self explanatory 
+- The min heap that I wrote is just simply that queue but the only difference is that the smallest is the first on the queue and will be the first one out and the same with the max heap the only difference is that the max heap is reverse order. To use it is already easy and self explanatory 
 
 ## Max Heap Implementation and explanation
 
@@ -819,7 +819,7 @@ Exit
 
 -  I wrote max heap for moddularity so that I can use it everyclass that I want to use it and encapsulated every method inside that class for easy reuse independently. The Features I wrote for max heap is custom insertion, removal, an interactive menu where it has user input, For the last I created a run method where that whole class is being run and so that I can just simply call the class and use the run method. The only Difference this from min heap is the reversed order where it display and pop function where that biggest is in the first and first to be removed. To use it is already easy and self explanatory 
 
-# Graphs Implementattion and 
+# Graphs Implementation and explanation
 
     public class Graphs {
         private Map<Integer, List<Integer>> adjList = new HashMap<>();
