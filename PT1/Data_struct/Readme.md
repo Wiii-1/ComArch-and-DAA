@@ -1,6 +1,6 @@
-## Data Structures 
+# Data Structures 
 
-## contents 
+# ontents 
 
 - Stacks
 - Queues
@@ -13,7 +13,7 @@
 - Tree
     - BST (Binary Search Tree)
 
-## Features
+# Features
 
 - Stack 
     - used linkedlist for dynamic rezing
@@ -80,9 +80,9 @@
     - inorder traversal 
 
 
-## Code Implemetation and explanation
+# Code Implemetation and explanation
 
-# stacks implementation an explanation
+## stacks implementation an explanation
     class CustomStack {
         private LinkedList <Integer> stack = new LinkedList<>();
         private Scanner s = new Scanner(System.in);
@@ -220,9 +220,9 @@ Exit
 - the Stacks that I created in a seperate class for encapsulation and modular use where I created my own custom stacks and added a user input. First we have the push method where it ask the user to enter a number to 
 then stores the input in a variable, the adds it to the stack finally prints a message that it have been added. Second the Pop method first it checks whether the stack is empty or not an if yes it'll print empty if no
 it'll proceed in removing or popping the element/data in the stack and stores it then prints it. The 3rd is the display where it simply displays the stacks, And finally the 4th one is the run method where it prints out 
-the users options and the user may choose from.
+the users options and the user may choose from. To use it is already easy and self explanatory 
 
-# Queue Implementation and explanation
+## Queue Implementation and explanation
 
     class Queue {
         private LinkedList<Integer> queue = new LinkedList<>();
@@ -357,10 +357,10 @@ The queue: [20]
 Choose an option: 4
 Exit
 
-- The basic concept of Queue that I have written above uses FIFO or first in first out along with it's output features, first I wrote Queue the same way from my stacks where I encapsulated the stacks an created a custom stacks with added functions of a user input, display, insertion, removal and Exiting function. The first method was the same from the typical basic queue where it just enqueue or add an item to the queue, A dequeue method where a user can remove a element or data to the queue. I added the display method for the user if he/she wants to see the queue & for the last is just simply a method where it runs it all so I only need to call the class where I encapsulated the queue class and made it modular for other uses.
+- The basic concept of Queue that I have written above uses FIFO or first in first out along with it's output features, first I wrote Queue the same way from my stacks where I encapsulated the stacks an created a custom stacks with added functions of a user input, display, insertion, removal and Exiting function. The first method was the same from the typical basic queue where it just enqueue or add an item to the queue, A dequeue method where a user can remove a element or data to the queue. I added the display method for the user if he/she wants to see the queue & for the last is just simply a method where it runs it all so I only need to call the class where I encapsulated the queue class and made it modular for other uses. To use it is already easy and self explanatory 
 
 
-# Priority Queue Implementation and explanation
+## Priority Queue Implementation and explanation
 
     class PriorityQueueClass {
         private PriorityQueue<int[]> pq;
@@ -514,9 +514,9 @@ The Priority Queue: [20]
 Choose an option: 4
 Exiting...
 
-- 
+- The priority Queue is the same with the normal queue with a bit of difference where I implemented spcifically for priority queue so I can store a element or number along wit it's priority value 
 
-# Min heap Implementation and explanation
+## Min heap Implementation and explanation
 
     class Min_heap{
         private PriorityQueue <Integer> min_heap = new PriorityQueue<>();
@@ -665,9 +665,9 @@ Your options are:
 Choose: 4
 Exit
 
--
+- The min heap that I wrote is just simply that queue butt that tonly difference is that the smallest is the first on the queue and will be the first one out and the same with the max heap the only difference is that the max heap is reverse order. To use it is already easy and self explanatory 
 
-# Max Heap Implementation and explanation
+## Max Heap Implementation and explanation
 
     class Max_heap{
         private PriorityQueue <Integer> maxheap = new PriorityQueue<>(Collections.reverseOrder());
@@ -817,7 +817,7 @@ Your options are:
 choose: 4
 Exit
 
-- 
+-  I wrote max heap for moddularity so that I can use it everyclass that I want to use it and encapsulated every method inside that class for easy reuse independently. The Features I wrote for max heap is custom insertion, removal, an interactive menu where it has user input, For the last I created a run method where that whole class is being run and so that I can just simply call the class and use the run method. The only Difference this from min heap is the reversed order where it display and pop function where that biggest is in the first and first to be removed. To use it is already easy and self explanatory 
 
 # Graphs Implementattion and 
 
@@ -855,9 +855,9 @@ Exit
 4->[2, 5]
 5->[4]
 
-- The simple creation of graph that I wrote is for only the explanation. 
+- The simple creation of graph that I wrote is for only the explanation. The graph is an adjacent list that uses a hash map to store node and their corresponding neigbors, it is an undirected graph where each edge is bidirectional meaning pointing both ways. The graph that I wrote has a dynamic edge addition so that it would check the nodes before adding edges, the graph traversal is just printing  the adjacent list. I madde the graph that I wrote scalable that can store large graphs with efficiency with hashmaps and arraylist and I madde it simple without any extra dependencies.
 
-# Breathe First Search Implementation and explanation
+## Breathe First Search Implementation and explanation
 
     public class BFS {
         public Map<Integer, List<Integer>> graph = new HashMap<>();
@@ -902,7 +902,7 @@ Exit
 
 - 
 
-# Binary Search Tree Implementation and explanation
+## Binary Search Tree Implementation and explanation
 
     class Binary_search_tree {
          Node root;
@@ -950,7 +950,7 @@ At the very start of the tree is the node root where it stores all the nodes, th
 
 
 ## End note
-Sir thank you sir for understanding and giving me this opportunity to learn by myself, I want to apologize that this is the only output that I managed to produce & possibly can't finish PT 2 due to all of our other subjects have the same due date. I home you understand it sir and thank you sir that I learned something at least. 
+Sir thank you sir for understanding and giving me this opportunity to learn by myself, I want to apologize that this is the only output that I managed to produce & possibly can't finish PT 2 due to all of our other subjects have the same due date. I home you understand it sir and thank you sir that I learned something at least. Also I'm tired I can't  do any more line by line explanation.
 
 
 
