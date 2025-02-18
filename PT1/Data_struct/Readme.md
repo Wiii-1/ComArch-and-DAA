@@ -422,6 +422,100 @@ Exit
 
     output: 
 
+1. Add to Queue
+2. Remove from Queue
+3. Display
+4. Exit
+
+Choose an option: 1
+
+Enter a number to queue: 14
+
+Enter its priorit (High = processed first): 4
+
+14 added to queue
+
+1. Add to Queue
+2. Remove from Queue
+3. Display
+4. Exit
+
+Choose an option: 1
+
+Enter a number to queue: 20
+
+Enter its priorit (High = processed first): 1
+
+20 added to queue
+
+1. Add to Queue
+2. Remove from Queue
+3. Display
+4. Exit
+
+Choose an option: 1
+
+Enter a number to queue: 60
+
+Enter its priorit (High = processed first): 9
+
+60 added to queue
+
+1. Add to Queue
+2. Remove from Queue
+3. Display
+4. Exit
+
+Choose an option: 3
+
+The Priority Queue: [60] [14] [20]
+
+1. Add to Queue
+2. Remove from Queue
+3. Display
+4. Exit
+
+Choose an option: 2
+
+60 removed from priority queue.
+
+1. Add to Queue
+2. Remove from Queue
+3. Display
+4. Exit
+
+Choose an option: 3
+
+The Priority Queue: [14] [20]
+
+1. Add to Queue
+2. Remove from Queue
+3. Display
+4. Exit
+
+Choose an option: 2
+
+14 removed from priority queue.
+
+1. Add to Queue
+2. Remove from Queue
+3. Display
+4. Exit
+
+Choose an option: 3
+
+The Priority Queue: [20]
+
+1. Add to Queue
+2. Remove from Queue
+3. Display
+4. Exit
+
+Choose an option: 4
+Exiting...
+
+- 
+
 # Min heap Implementation and explanation
 
     class Min_heap{
@@ -469,6 +563,110 @@ Exit
 
     output: 
 
+Your options are: 
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+Choose: 1
+
+Enter a value:  3
+
+3 is added
+
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+Choose: 1
+
+Enter a value:  7
+
+7 is added
+
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+Choose: 1
+
+Enter a value:  9
+
+9 is added
+
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+Choose: 3
+
+The min heap: [3, 7, 9]
+
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+Choose: 2
+
+3 is removed
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+Choose: 3
+
+The min heap: [7, 9]
+
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+Choose: 2
+
+7 is removed
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+Choose: 3
+
+The min heap: [9]
+
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+Choose: 4
+Exit
+
+-
+
 # Max Heap Implementation and explanation
 
     class Max_heap{
@@ -515,6 +713,112 @@ Exit
 
     output: 
 
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+choose: 1
+
+Enter a value: 3
+
+value 3 added
+
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+choose: 1
+
+Enter a value: 10
+
+value 10 added
+
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+choose: 1
+
+Enter a value: 30
+
+value 30 added
+
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+choose: 3
+
+The max heap: [30, 3, 10]
+
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+choose: 2
+
+removed 30
+
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+choose: 3
+
+The max heap: [10, 3]
+
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+choose: 2
+
+removed 10
+
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+choose: 3
+
+The max heap: [3]
+
+Your options are:
+
+1. Add a value
+2. Remove a value
+3. Display
+4. Exit
+
+choose: 4
+Exit
+
+- 
+
 # Graphs Implementattion and 
 
     public class Graphs {
@@ -544,6 +848,14 @@ Exit
     }
 
     output: 
+
+1->[2, 3]
+2->[1, 4]
+3->[1]
+4->[2, 5]
+5->[4]
+
+- The simple creation of graph that I wrote is for only the explanation. 
 
 # Breathe First Search Implementation and explanation
 
@@ -586,7 +898,9 @@ Exit
     }
     }
 
-    output: 
+    output: 3 1 2 4 
+
+- 
 
 # Binary Search Tree Implementation and explanation
 
@@ -628,7 +942,15 @@ Exit
     }
     }
 
-    output: 
+    output: 10 25 30 32 40 
+
+- The Binary Search Tree that I wrote is simple yet I incorporated a recursion for the correct placemnet of each entered input or for short I created a predefined input and that inputed data or number will be sorted and will be put to whether left to right so the type of Binary search tree I wrote is the inorder traversal primariraly this is the simplest yet it's goodd for examples and explanation.
+
+At the very start of the tree is the node root where it stores all the nodes, the second method within class bst is insert method where it calls the insertRec for it's recursive help in placing it in the correct place whether it's left or right or root, 3rd to the last method that I wrote is the inorder it calls the inorder traversal to print the sorted output, for the last is the inorderRec where it simply prints the sorted order and stops the recursion if the tree or nodes is nothing or reached the end. 
+
+
+## End note
+Sir thank you sir for understanding and giving me this opportunity to learn by myself, I want to apologize that this is the only output that I managed to produce & possibly can't finish PT 2 due to all of our other subjects have the same due date. I home you understand it sir and thank you sir that I learned something at least. 
 
 
 
