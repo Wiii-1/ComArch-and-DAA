@@ -31,14 +31,16 @@ class PriorityQueueClass {
     }
 
     public void display() {
+        
         List<int[]> temp = new ArrayList<>(pq);
         temp.sort((a,b) -> Integer.compare(b[0], a[0]));
+
+        System.out.print("\nThe Priority Queue: ");
         
         for (int[] item : temp){
-            System.out.print( "\nPriority Queue: "+ "["+item[1]+"]\n"  );
+            System.out.print( "["+item[1]+"] "  );
         }
-
-        System.out.print("");
+        System.out.println(); 
     }
 
     public void run() {
@@ -55,7 +57,7 @@ class PriorityQueueClass {
                     System.out.println("Exiting...");
                     return; 
                 }
-                default -> System.out.println("Invalid choice.");
+                default -> System.out.println("\nInvalid choice.");
             }
         }
     }
