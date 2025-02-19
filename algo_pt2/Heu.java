@@ -26,7 +26,7 @@ public class Heu {
         graph.put(5, Arrays.asList(9));
         graph.put(6, Arrays.asList(2));
 
-        int start = 1, goal = 9;
+        int start = 1, goal = 8;
         greedyBesFirstSearch(graph, heuristic, start, goal);
 
     }

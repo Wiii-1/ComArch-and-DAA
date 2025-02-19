@@ -1,5 +1,5 @@
 public class Fibonocci_sequence {
-    static int[] memo = new int[1000];
+    static int[] memo = new int[100];
     
     static int fib(int n){
         if (n <= 1) return n;
@@ -9,7 +9,7 @@ public class Fibonocci_sequence {
         return memo[n];
     }
     public static void main(String[]args){
-        System.out.println(fib(10));
+        System.out.println(fib(8));
     }
 }
 
