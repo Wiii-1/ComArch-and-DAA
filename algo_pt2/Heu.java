@@ -38,7 +38,7 @@ public class Heu {
         openSet.add(start);
 
         while(!openSet.isEmpty()){
-            int current = openSet.poll();
+            int current = openSet.poll();   
 
             System.out.println("visiting: " + current);
 

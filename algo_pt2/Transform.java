@@ -45,7 +45,7 @@ public class Transform {
         int [] arr = {5,1,8,20,2,4,6,3,7,9,};
         System.out.println("Before sorting: " + Arrays.toString(arr));
         heapSort(arr);
-        System.out.println("after sorting: " + Arrays.toString(arr));
+        System.out.println("after sorting: " + Arrays.toString(arr)) ;
 
     }
 }
