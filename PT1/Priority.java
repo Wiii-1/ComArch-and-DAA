@@ -67,6 +67,11 @@ class PriorityQueueClass {
 public class Priority {
     public static void main(String[] args) {
         PriorityQueueClass pq = new PriorityQueueClass();
+
+        performanceMonitor monitor = new performanceMonitor();
+        monitor.start();
         pq.run();
+        monitor.stop("Priority");
+        
     }
 }

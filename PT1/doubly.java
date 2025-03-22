@@ -117,7 +117,10 @@ public class doubly {
         System.out.println("Null");
     }
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
+        performanceMonitor monitor = new performanceMonitor();
+        monitor.start();
+        
         doubly dll = new doubly();
         
         dll.insertEnd(50);
@@ -130,5 +133,7 @@ public class doubly {
 
         dll.deletionByValue(40);
         System.out.println("Search 40: " + dll.search(40));
+
+        monitor.stop("doubly");
     }
 }

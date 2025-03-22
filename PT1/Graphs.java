@@ -18,11 +18,14 @@ public class Graphs{
 
     public static void main (String[]args){
         Graphs graphs = new Graphs();
+        performanceMonitor monitor = new performanceMonitor();
+        monitor.start();
         graphs.addEdge(1,2);
         graphs.addEdge(1,3);
         graphs.addEdge(2,4);
         graphs.addEdge(4, 5);
         graphs.display();
+        monitor.stop("Graphs");
     }
 
 }

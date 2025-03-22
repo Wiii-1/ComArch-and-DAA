@@ -73,8 +73,8 @@ public class singly {
     
     public static void main(String[] args) {
         singly sll = new singly();
-        performanceMonitor monitor = new performanceMonitor();
         
+        performanceMonitor monitor = new performanceMonitor();
         monitor.start();
 
         sll.insertEnd(30);
@@ -87,10 +87,8 @@ public class singly {
         sll.display();
         System.out.println("Search 10: " + sll.search(10));
 
-
-        monitor.stop();
-
-        performanceMonitor.getClassFileSize("/bin/singly");
+        monitor.stop("Singly Linked List");
+        
 
 
     }

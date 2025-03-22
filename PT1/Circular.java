@@ -69,10 +69,14 @@ public class Circular {
     
     public static void main(String[] args) {
         Circular cll = new Circular();
+        performanceMonitor monitor = new performanceMonitor();
+        monitor.start();
 
         cll.insertBeginning(1);
         cll.insertEnd(4);
         cll.insertEnd(3);
         cll.display();
+
+        monitor.stop("Circular");
     }
 }

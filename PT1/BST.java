@@ -51,7 +51,8 @@ class Binary_search_tree{
 public class BST {
     public static void main(String[]args){
 
-        
+        performanceMonitor monitor = new performanceMonitor();
+        monitor.start();
 
         Binary_search_tree bst = new Binary_search_tree();
         bst.insert(30);
@@ -60,5 +61,7 @@ public class BST {
         bst.insert(40);
         bst.insert(10);
         bst.inorder();
+
+        monitor.stop("BST");
     }
 }

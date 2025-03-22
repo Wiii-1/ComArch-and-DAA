@@ -32,22 +32,18 @@ public class BFS {
     public static void main(String[] args) {
 
         performanceMonitor monitor = new performanceMonitor();
-
         monitor.start();
+        
         BFS bfs = new BFS();
         bfs.addEdge(1, 2);
         bfs.addEdge(1, 3);
         bfs.addEdge(2, 4);
         bfs.bfs(3);
 
+        monitor.stop("BFS");
         
-        
 
-        monitor.stop();
-
-
-
-        performanceMonitor.getClassFileSize("/bin/BFS");
+       
 
         
         

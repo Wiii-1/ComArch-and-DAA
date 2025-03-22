@@ -52,6 +52,11 @@ class CustomQueue {
 public class Queues{
     public static void main(String[]args){
         CustomQueue queue = new CustomQueue();    
+
+        performanceMonitor monitor = new performanceMonitor();
+        monitor.start();
         queue.run();
+        
+        monitor.stop("Queues");
     }
 }

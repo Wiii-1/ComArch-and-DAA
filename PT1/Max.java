@@ -50,7 +50,9 @@ class Max_Heap{
 public class Max {
     public static void main(String[] args) {
         Max_Heap mp = new Max_Heap();
-
+        performanceMonitor monitor = new performanceMonitor();
+        monitor.start();
         mp.run();
+        monitor.stop("Max");
     }
 }

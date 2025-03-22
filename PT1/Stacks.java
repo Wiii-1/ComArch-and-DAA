@@ -48,16 +48,15 @@ class CustomStack {
 public class Stacks {
     public static void main(String[]args){
 
-        performanceMonitor  monitor = new performanceMonitor();
+        performanceMonitor monitor = new performanceMonitor();
+        monitor.start();
 
         CustomStack thestack = new CustomStack();
-
-        monitor.start();
+        
 
         thestack.run();
 
-        monitor.stop();
-
-        performanceMonitor.getClassFileSize("bin/Stacks");
+        monitor.stop("Stacks");
+        
     }
 }
