@@ -18,9 +18,13 @@ public class performanceMonitor {
         long endTime = System.nanoTime();
         long endMemory = getUsedMemory();
 
-        double timeElapsed = (endTime - startTime) / 1e6;
+        double timeElapsed = (endTime - startTime) / 1e6; 
         double memoryUsed = (endMemory - startMemory) / 1024.0; 
-        double fileSize = getClassFileSize("bin/PT1/" + className); 
+        double fileSize = getClassFileSize("bin/PT1/BST.class");
+
+
+
+; 
 
         // Print the Performance Results
         System.out.println("---------------------------------------------------");
@@ -42,12 +46,16 @@ public class performanceMonitor {
     }
 
     private double getClassFileSize(String classFilePath) {
-        File file = new File(classFilePath + ".class");
-
+        File file = new File(classFilePath);
+    
+        
+        System.out.println("Checking file: " + file.getAbsolutePath());
+    
         if (file.exists()) {
             return file.length() / 1024.0; 
         } else {
             return -1;
         }
     }
+    
 }

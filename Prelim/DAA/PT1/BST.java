@@ -1,4 +1,4 @@
-
+import java.util.Random;
 class Node {
     int key;
     Node left, right;
@@ -49,19 +49,27 @@ class Binary_search_tree{
 }
 
 public class BST {
-    public static void main(String[]args){
+    public static void main(String[] args) {
+        int[] inputSizes = {1000, 10000, 100000}; 
+        Random rand = new Random();
 
-        performanceMonitor monitor = new performanceMonitor();
-        monitor.start();
+        for (int n : inputSizes) {
+            performanceMonitor monitor = new performanceMonitor();
+            monitor.start();
 
-        Binary_search_tree bst = new Binary_search_tree();
-        bst.insert(30);
-        bst.insert(32);
-        bst.insert(25);
-        bst.insert(40);
-        bst.insert(10);
-        bst.inorder();
+            Binary_search_tree bst = new Binary_search_tree();
 
-        monitor.stop("BST");
+            
+            for (int i = 0; i < n; i++) {
+                bst.insert(rand.nextInt(n * 10)); 
+            }
+
+            
+            System.out.print("Sample output (" + n + " elements): ");
+            bst.inorder(); 
+
+            monitor.stop("BST");
+
+        }
     }
 }
