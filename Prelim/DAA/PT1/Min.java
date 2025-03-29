@@ -50,14 +50,13 @@ public class Min {
     public static void main(String[]args){
         Min_heap mp = new Min_heap();
 
-        performanceMonitor monitor = new performanceMonitor();
-        monitor.start();
+        
 
     
         
         mp.run();
 
-        monitor.stop("Min");
+       
         
     }
 }

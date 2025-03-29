@@ -1,4 +1,6 @@
-public class singly {
+package com.mycompany.pt1_continuation;
+
+public class Singly {
 
     private class Node {
         int data;
@@ -12,7 +14,7 @@ public class singly {
 
     private Node head;
 
-    
+    // Insert at the end of the list
     public void insertEnd(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -24,14 +26,14 @@ public class singly {
         temp.next = newNode;
     }
 
-    
+    // Insert at the beginning of the list
     public void insertBeginning(int data) {
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
     }
 
-    
+    // Insert at a specific position
     public void insertAt(int data, int position) {
         Node newNode = new Node(data);
         if (position == 0) {
@@ -50,45 +52,12 @@ public class singly {
     }
 
     
-    public boolean search(int key) {
-        Node temp = head;
-        while (temp != null) {
-            if (temp.data == key) return true;
-            temp = temp.next;
+
+    // Run the singly linked list operations for a specific input size
+    public void runSingly(int size) {
+        for (int i = 0; i < size; i++) {
+            insertEnd(i);  // Insert at the end
         }
-        return false;
-    }
-
-    
-    public void display() {
-        Node temp = head;
-        System.out.print("List: ");
-        while (temp != null) {
-            System.out.print(temp.data + " -> ");
-            temp = temp.next;
-        }
-        System.out.println("null");
-    }
-
-    
-    public static void main(String[] args) {
-        singly sll = new singly();
-        
-        
-
-        sll.insertEnd(30);
-        sll.insertEnd(40);
-        sll.insertBeginning(10);
-        sll.insertAt(20, 2);
-
-
-        
-        sll.display();
-        System.out.println("Search 10: " + sll.search(10));
-
-        
-        
-
-
+        //display();  // Display the list
     }
 }

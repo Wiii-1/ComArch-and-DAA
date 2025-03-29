@@ -31,8 +31,7 @@ public class BFS {
 
     public static void main(String[] args) {
 
-        performanceMonitor monitor = new performanceMonitor();
-        monitor.start();
+        
         
         BFS bfs = new BFS();
         bfs.addEdge(1, 2);
@@ -40,7 +39,7 @@ public class BFS {
         bfs.addEdge(2, 4);
         bfs.bfs(3);
 
-        monitor.stop("BFS");
+        
         
 
        

@@ -1,6 +1,7 @@
+package com.mycompany.pt1_continuation;
+
 public class Circular {
 
-    
     private class Node {
         int data;
         Node next;
@@ -13,7 +14,7 @@ public class Circular {
 
     private Node head;
 
-    
+    // Insert at the end
     public void insertEnd(int data) {
         Node newNode = new Node(data);
 
@@ -31,7 +32,7 @@ public class Circular {
         newNode.next = head;
     }
 
-    
+    // Insert at the beginning
     public void insertBeginning(int data) {
         Node newNode = new Node(data);
 
@@ -50,32 +51,27 @@ public class Circular {
         head = newNode;
     }
 
-    
+    // Display the list
     public void display() {
         if (head == null) {
-            System.out.println("List is empty.");
+            //System.out.println("List is empty.");
             return;
         }
 
         Node temp = head;
         System.out.print("Circular List: ");
         do {
-            System.out.print(temp.data + " -> ");
+            //System.out.print(temp.data + " -> ");
             temp = temp.next;
         } while (temp != head);
         System.out.println("head");
     }
 
-    
-    public static void main(String[] args) {
-        Circular cll = new Circular();
-        
-
-        cll.insertBeginning(1);
-        cll.insertEnd(4);
-        cll.insertEnd(3);
-        cll.display();
-
-        
+    // Run the circular linked list operations for a specific input size
+    public void runCircular(int size) {
+        for (int i = 0; i < size; i++) {
+            insertEnd(i);  // Insert at the end
+        }
+        display();  // Display the list
     }
 }

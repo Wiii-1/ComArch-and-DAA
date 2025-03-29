@@ -1,6 +1,7 @@
-public class doubly {
-    
-    
+package com.mycompany.pt1_continuation;
+
+public class Doubly {
+
     private class Node {
         int data;
         Node next;
@@ -16,7 +17,7 @@ public class doubly {
     private Node head;
     private Node tail;
 
-    
+    // Insert at the end
     public void insertEnd(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -28,7 +29,7 @@ public class doubly {
         tail = newNode;
     }
 
-    
+    // Insert at the beginning
     public void insertBeginning(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -40,7 +41,7 @@ public class doubly {
         head = newNode;
     }
 
-    
+    // Insert at a specific position
     public void insertAt(int data, int position) {
         if (position == 0) {
             insertBeginning(data);
@@ -62,7 +63,7 @@ public class doubly {
         if (newNode.next == null) tail = newNode;
     }
 
-    
+    // Deletion by value
     public void deletionByValue(int key) {
         if (head == null) return;
 
@@ -85,54 +86,22 @@ public class doubly {
         if (temp == tail) tail = temp.prev;
     }
 
-    
-    public boolean search(int key) {
-        Node temp = head;
-        while (temp != null) {
-            if (temp.data == key) return true;
-            temp = temp.next;
-        }
-        return false;
-    }
-
-    
+    // Display the list forward
     public void displayForward() {
         Node temp = head;
         System.out.print("Forward: ");
         while (temp != null) {
-            System.out.print(temp.data + " <-> ");
+            //System.out.print(temp.data + " <-> ");
             temp = temp.next;
         }
-        System.out.println("Null");
+        //System.out.println("null");
     }
 
-    
-    public void displayBackward() {
-        Node temp = tail;
-        System.out.print("Backward: ");
-        while (temp != null) {
-            System.out.print(temp.data + " <-> ");
-            temp = temp.prev;
+    // Run the doubly linked list operations for a specific input size
+    public void runDoubly(int size) {
+        for (int i = 0; i < size; i++) {
+            insertEnd(i);  // Insert at the end
         }
-        System.out.println("Null");
-    }
-
-    public static void main(String[] args) {
-        
-        
-        doubly dll = new doubly();
-        
-        dll.insertEnd(50);
-        dll.insertEnd(40);
-        dll.insertBeginning(5);
-        dll.insertAt(30, 2);
-        
-        dll.displayForward();
-        dll.displayBackward();
-
-        dll.deletionByValue(40);
-        System.out.println("Search 40: " + dll.search(40));
-
-        
+        displayForward();  // Display the list forward
     }
 }
