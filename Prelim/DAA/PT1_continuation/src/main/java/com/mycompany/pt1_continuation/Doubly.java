@@ -17,7 +17,7 @@ public class Doubly {
     private Node head;
     private Node tail;
 
-    // Insert at the end
+
     public void insertEnd(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -29,7 +29,7 @@ public class Doubly {
         tail = newNode;
     }
 
-    // Insert at the beginning
+
     public void insertBeginning(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -41,7 +41,7 @@ public class Doubly {
         head = newNode;
     }
 
-    // Insert at a specific position
+
     public void insertAt(int data, int position) {
         if (position == 0) {
             insertBeginning(data);
@@ -63,7 +63,7 @@ public class Doubly {
         if (newNode.next == null) tail = newNode;
     }
 
-    // Deletion by value
+
     public void deletionByValue(int key) {
         if (head == null) return;
 
@@ -86,22 +86,13 @@ public class Doubly {
         if (temp == tail) tail = temp.prev;
     }
 
-    // Display the list forward
-    public void displayForward() {
-        Node temp = head;
-        System.out.print("Forward: ");
-        while (temp != null) {
-            //System.out.print(temp.data + " <-> ");
-            temp = temp.next;
-        }
-        //System.out.println("null");
-    }
 
-    // Run the doubly linked list operations for a specific input size
+
+    
     public void runDoubly(int size) {
         for (int i = 0; i < size; i++) {
             insertEnd(i);  // Insert at the end
         }
-        displayForward();  // Display the list forward
+        
     }
 }

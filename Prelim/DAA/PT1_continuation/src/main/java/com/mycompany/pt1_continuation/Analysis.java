@@ -1,8 +1,6 @@
 package com.mycompany.pt1_continuation;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.ZipEntry;
@@ -12,16 +10,16 @@ public class Analysis {
     public static void main(String[] args) {
         System.out.println("Running Data Structure Analysis...");
 
-        int[] inputSizes = {100, 1000, 10000, 100000};
+        int[] inputSizes = {100, 1000, 10000, 100000, 1000000};
 
         for (int size : inputSizes) {
             System.out.println("\n===============================");
             System.out.println("[DEBUG] Running Tests with Input Size: " + size);
             System.out.println("===============================\n");
-            System.out.flush(); // Print before execution
+            System.out.flush();
             
             try {
-                Thread.sleep(1000); // ✅ Wait 1 second before running tests
+                Thread.sleep(1000); 
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -49,7 +47,7 @@ public class Analysis {
             System.out.flush();
 
             try {
-                Thread.sleep(2000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -58,15 +56,13 @@ public class Analysis {
         System.out.println("Data Structure Analysis Completed.");
     }
 
-    // Helper method to run the test for each data structure
     private static String runTest(Object ds, String className, int size) {
         try {
             System.out.println("[DEBUG] Starting " + className + " with size " + size);
-            System.out.flush(); // ✅ Forces NetBeans to show debug output
+            System.out.flush(); 
     
             long startTime = System.nanoTime();
-    
-            // Run the correct data structure method
+
             if (ds instanceof BST) ((BST) ds).runBST(size);
             else if (ds instanceof BFS) ((BFS) ds).runBFS(size);
             else if (ds instanceof Graphs) ((Graphs) ds).runGraph(size);
@@ -85,8 +81,8 @@ public class Analysis {
             double fileSize = getClassFileSize(className);
     
             System.out.println("[DEBUG] Finished " + className + " with size " + size);
-            System.out.flush(); // ✅ Forces print
-    
+            System.out.flush();
+
             return String.format(
                     "---------------------------------------------------\n" +
                     "Class: %s\nExecution Time: %.4f ms\nMemory Used: %.4f KB\nClass File Size: %.2f KB\n",
@@ -100,6 +96,9 @@ public class Analysis {
         }
     }
     
+    
+    
+
     private static double getClassFileSize(String className) {
     String jarPath = "target/PT1_continuation-1.0-SNAPSHOT.jar";
 
@@ -114,12 +113,10 @@ public class Analysis {
         List<String> jarEntries = new ArrayList<>();
         zipFile.stream().forEach(entry -> jarEntries.add(entry.getName()));
 
-        // Print all available class files
         jarEntries.stream()
             .filter(name -> name.endsWith(".class"))
             .forEach(name -> System.out.println(" - " + name));
 
-        // Convert class name to correct JAR path format
         String classPath = "com/mycompany/pt1_continuation/" + className + ".class";
         System.out.println("[DEBUG] Looking for: " + classPath);
 
@@ -134,8 +131,8 @@ public class Analysis {
         }
     } catch (Exception e) {
         System.out.println("[ERROR] Failed to read JAR file: " + jarPath);
-        e.printStackTrace();
+        e.printStackTrace();    
         return 0.00;
-        }
     }
+}
 }

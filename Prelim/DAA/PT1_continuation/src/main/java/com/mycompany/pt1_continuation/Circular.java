@@ -14,7 +14,7 @@ public class Circular {
 
     private Node head;
 
-    // Insert at the end
+
     public void insertEnd(int data) {
         Node newNode = new Node(data);
 
@@ -32,7 +32,7 @@ public class Circular {
         newNode.next = head;
     }
 
-    // Insert at the beginning
+
     public void insertBeginning(int data) {
         Node newNode = new Node(data);
 
@@ -51,27 +51,12 @@ public class Circular {
         head = newNode;
     }
 
-    // Display the list
-    public void display() {
-        if (head == null) {
-            //System.out.println("List is empty.");
-            return;
-        }
+   
 
-        Node temp = head;
-        System.out.print("Circular List: ");
-        do {
-            //System.out.print(temp.data + " -> ");
-            temp = temp.next;
-        } while (temp != head);
-        System.out.println("head");
-    }
-
-    // Run the circular linked list operations for a specific input size
+    
     public void runCircular(int size) {
         for (int i = 0; i < size; i++) {
-            insertEnd(i);  // Insert at the end
-        }
-        display();  // Display the list
+            insertEnd(i);  
+        }  
     }
 }

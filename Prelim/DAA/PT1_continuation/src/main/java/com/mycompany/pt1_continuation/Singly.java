@@ -14,7 +14,6 @@ public class Singly {
 
     private Node head;
 
-    // Insert at the end of the list
     public void insertEnd(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -26,14 +25,12 @@ public class Singly {
         temp.next = newNode;
     }
 
-    // Insert at the beginning of the list
     public void insertBeginning(int data) {
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
     }
 
-    // Insert at a specific position
     public void insertAt(int data, int position) {
         Node newNode = new Node(data);
         if (position == 0) {
@@ -53,11 +50,9 @@ public class Singly {
 
     
 
-    // Run the singly linked list operations for a specific input size
     public void runSingly(int size) {
         for (int i = 0; i < size; i++) {
-            insertEnd(i);  // Insert at the end
+            insertEnd(i);  
         }
-        //display();  // Display the list
     }
 }
