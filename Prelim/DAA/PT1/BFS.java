@@ -1,4 +1,11 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
 
 public class BFS {
     public Map<Integer, List<Integer>> graph = new HashMap<>();
@@ -31,20 +38,11 @@ public class BFS {
 
     public static void main(String[] args) {
 
-        
-        
         BFS bfs = new BFS();
         bfs.addEdge(1, 2);
         bfs.addEdge(1, 3);
         bfs.addEdge(2, 4);
         bfs.bfs(3);
 
-        
-        
-
-       
-
-        
-        
     }
 }

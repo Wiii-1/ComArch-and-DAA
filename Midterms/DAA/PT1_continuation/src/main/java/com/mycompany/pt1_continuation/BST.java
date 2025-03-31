@@ -1,5 +1,6 @@
+package com.mycompany.pt1_continuation;
 
-
+import java.util.Random;
 
 class Node {
     int key;
@@ -11,10 +12,10 @@ class Node {
     }
 }
 
-class Binary_search_tree {
-    Node root;
+public class BST {
+    private Node root;
 
-    public Binary_search_tree() {
+    public BST() {
         root = null;
     }
 
@@ -34,29 +35,10 @@ class Binary_search_tree {
         return root;
     }
 
-    public void inorder() {
-        inorderRec(root);
-        System.out.println();
-    }
-
-    private void inorderRec(Node root) {
-        if (root != null) {
-            inorderRec(root.left);
-            System.out.print(root.key + " ");
-            inorderRec(root.right);
+    public void runBST(int size) {
+        Random rand = new Random();
+        for (int i = 0; i < size; i++) {
+            insert(rand.nextInt(size * 10));
         }
     }
-}
-
-public class BST {
-   public static void main(String[] args) {
-       Binary_search_tree bst = new Binary_search_tree();
-
-       bst.insert(1);
-       bst.insert(30);
-       bst.inorder();
-       
-
-    }
-    
 }
