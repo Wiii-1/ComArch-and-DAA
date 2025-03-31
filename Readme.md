@@ -14,7 +14,7 @@ this will hold prelims to finals
 ### Midterms:
 
     ComArch 
-    DAA 
+    DAA         - update 03/31/25
 
 ### Prefinals:
 
